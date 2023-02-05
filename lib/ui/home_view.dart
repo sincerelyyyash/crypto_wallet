@@ -18,7 +18,14 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   double bitcoin = 0.0;
   double ethereum = 0.0;
-  double matic = 0.0;
+  double cardano = 0.0;
+  double tether = 0.0;
+  double dogecoin = 0.0;
+  double solana = 0.0;
+  double litecoin = 0.0;
+  double polkadot = 0.0;
+  double tron = 0.0;
+  double chainlink = 0.0;
 
   @override
   void initState() {
@@ -28,7 +35,14 @@ class _HomeViewState extends State<HomeView> {
   getValues() async {
     bitcoin = await getPrice("bitcoin");
     ethereum = await getPrice("ethereum");
-    matic = await getPrice("matic");
+    cardano = await getPrice("cardano");
+    tether = await getPrice("tether");
+    dogecoin = await getPrice("dogecoin");
+    solana = await getPrice("solana");
+    litecoin = await getPrice("litecoin");
+    polkadot = await getPrice("polkadot");
+    tron = await getPrice("tron");
+    chainlink = await getPrice("chainlink");
     setState(() {});
   }
 
@@ -39,13 +53,28 @@ class _HomeViewState extends State<HomeView> {
         return bitcoin * amount;
       } else if (id == "ethereum") {
         return ethereum * amount;
-      } else {
-        return matic * amount;
+      } else if (id == "cardano") {
+        return cardano * amount;
+      } else if (id == "tether") {
+        return tether * amount;
+      } else if (id == "dogecoin") {
+        return dogecoin * amount;
+      } else if (id == "solana") {
+        return solana * amount;
+      } else if (id == "litecoin") {
+        return litecoin * amount;
+      } else if (id == "polkadot") {
+        return polkadot * amount;
+      } else if (id == "tron") {
+        return tron * amount;
+      } else if (id == "chainlink") {
+        return chainlink * amount;
       }
     }
 
     return Scaffold(
       appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Color(0xFF6969b0),
           automaticallyImplyLeading: false,
           title: const Text('My NetWorth',
@@ -54,7 +83,7 @@ class _HomeViewState extends State<HomeView> {
               ))),
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xFF6969b0),
+          color: Color(0xFF2c2c3a),
         ),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -82,7 +111,7 @@ class _HomeViewState extends State<HomeView> {
                           height: MediaQuery.of(context).size.height / 12,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15.0),
-                            color: Color(0xFF2c2c3a),
+                            color: Color(0xFF5858a7),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -96,7 +125,7 @@ class _HomeViewState extends State<HomeView> {
                                     color: Color(0xFFababd3), fontSize: 18),
                               ),
                               Text(
-                                  "${getValues(document.id, document['Amount'])}Rs",
+                                  "${getValues(document.id, document['Amount'])} Rs",
                                   style: TextStyle(
                                       color: Color(0xFFababd3), fontSize: 18)),
                               IconButton(

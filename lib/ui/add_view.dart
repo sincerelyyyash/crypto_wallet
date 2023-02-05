@@ -12,7 +12,14 @@ class _AddViewState extends State<AddView> {
   List<String> coins = [
     "bitcoin",
     "ethereum",
-    "matic",
+    "cardano",
+    "tether",
+    "dogecoin",
+    "solana",
+    "litecoin",
+    "polkadot",
+    "tron",
+    "chainlink",
   ];
 
   String dropdownValue = "bitcoin";
