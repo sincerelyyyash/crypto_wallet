@@ -29,13 +29,13 @@ class _AddViewState extends State<AddView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: Color(0xFF6969b0),
+            backgroundColor: Color(0xFF19B5FE),
             title: const Text('Add your Coins',
                 style: TextStyle(
                   color: Color(0xFF121222),
                 ))),
         body: Container(
-          color: Color(0xFF6969b0),
+          color: Color(0xFF19B5FE),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -43,7 +43,7 @@ class _AddViewState extends State<AddView> {
                 width: MediaQuery.of(context).size.width / 1.5,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Color(0xFF5858a7),
+                  color: Color(0xFF59ABE3),
                 ),
                 child: Center(
                   child: DropdownButton(
@@ -87,7 +87,7 @@ class _AddViewState extends State<AddView> {
                 height: 45,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15.0),
-                  color: Color(0xFF9b9bca),
+                  color: Color(0xFF59ABE3),
                 ),
                 child: MaterialButton(
                   onPressed: () async {

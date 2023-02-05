@@ -75,15 +75,15 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Color(0xFF6969b0),
+          backgroundColor: Color(0xFF19B5FE),
           automaticallyImplyLeading: false,
           title: const Text('My NetWorth',
               style: TextStyle(
-                color: Color(0xFF121222),
+                color: Colors.white,
               ))),
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xFF2c2c3a),
+          color: Color(0xFF19B5FE),
         ),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -111,7 +111,7 @@ class _HomeViewState extends State<HomeView> {
                           height: MediaQuery.of(context).size.height / 12,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15.0),
-                            color: Color(0xFF5858a7),
+                            color: Color(0xFF59ABE3),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -122,12 +122,12 @@ class _HomeViewState extends State<HomeView> {
                               Text(
                                 "${document.id}",
                                 style: TextStyle(
-                                    color: Color(0xFFababd3), fontSize: 18),
+                                    color: Colors.white, fontSize: 18),
                               ),
                               Text(
                                   "${getValues(document.id, document['Amount'])} Rs",
                                   style: TextStyle(
-                                      color: Color(0xFFababd3), fontSize: 18)),
+                                      color: Colors.white, fontSize: 18)),
                               IconButton(
                                 onPressed: () async {
                                   await removeCoins(document.id);
