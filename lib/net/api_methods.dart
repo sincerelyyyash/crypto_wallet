@@ -4,8 +4,7 @@ import 'dart:convert';
 
 Future<double> getPrice(String id) async {
   try {
-    var apiUrl =
-        "https://api.coingecko.com/api/v3/simple/price?ids=$id&vs_currencies=inr";
+    var apiUrl = "API-KEY-HERE";
     print(apiUrl);
     final Uri url = Uri.parse(apiUrl);
     var response = await http.get(url);
